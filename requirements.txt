@@ -1,0 +1,8 @@
+torch>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-learn>=1.2.0
+lifelines>=0.27.0
+pycox>=0.2.3
+pandas>=1.5.0
+matplotlib>=3.7.0
