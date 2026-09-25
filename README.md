@@ -14,7 +14,7 @@ Code for the paper:
 ## Requirements
 
 ```
-pip install torch lifelines scikit-survival pycox scikit-learn scipy pandas matplotlib
+pip install torch lifelines scikit-survival pycox scikit-learn scipy pandas numpy
 ```
 
 ## Repository Structure
@@ -26,22 +26,20 @@ mnshe/
 │   ├── real_data_gbsg.py
 │   └── real_data_flchain.py
 ├── results/
-│   ├── best_hparams.json
-│   ├── best_ds_hparams.json
-│   ├── gbsg_results.json
-│   ├── flchain_results.json
 │   └── simulation/
 └── README.md
 ```
 
-## Citation
+## Usage
+
+Each script can be run directly:
 
 ```
-@article{mnshe2025,
-  title   = {Monotonic Neural Spline Hazard Estimation
-             for Right-Censored Survival Data},
-  author  = {[Authors]},
-  journal = {[Journal]},
-  year    = {[Year]}
-}
+python experiments/simulation_study.py
+python experiments/real_data_gbsg.py
+python experiments/real_data_flchain.py
 ```
+
+Hyperparameters are selected once by cross-validation and cached
+to `best_hparams.json` / `best_ds_hparams.json`, then reused across
+all experiments.
